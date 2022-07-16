@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+    php:
+      container_name: eight-rooms
+      image: php7:ubuntu-18.04
+      ports:
+      - "9080:80"
+      - "9443:443"
+      volumes:
+      - ./html:/var/www/html
+      - /var/run/docker.sock:/var/run/docker.sock

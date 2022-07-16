@@ -1,0 +1,18 @@
+# eight-rooms-docker
+
+docker build . --tag php7:ubuntu-18.04
+docker-compose up -d
+
+curl -o \
+    ./eight-rooms.zip -L \
+    "https://github.com/BikerIndian/eight-rooms/archive/refs/heads/fix_search.zip"
+
+unzip -q ./eight-rooms.zip -d ./
+mv  ./eight-rooms-fix_search/* ./html
+rm -rf ./eight-rooms-fix_search
+rm -rf ./eight-rooms.zip
+chmod 777 ./html/temp
+chmod -R 777 ./html/temp/*
+
+#docker ps -a
+#docker exec -it eight-rooms /bin/bash
