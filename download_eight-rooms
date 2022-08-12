@@ -1,4 +1,4 @@
-# eight-rooms-docker
+#!/bin/sh
 
 docker build . --tag php7:ubuntu-18.04
 docker-compose up -d
@@ -8,11 +8,8 @@ curl -o \
     "https://github.com/BikerIndian/eight-rooms/archive/refs/heads/master.zip"
 
 unzip -q ./eight-rooms.zip -d ./
-mv  ./eight-rooms-fix_search/* ./html
-rm -rf ./eight-rooms-fix_search
+mv  ./eight-rooms-master/* ./html
+rm -rf ./eight-rooms-master
 rm -rf ./eight-rooms.zip
 chmod 777 ./html/temp
 chmod -R 777 ./html/temp/*
-
-#docker ps -a
-#docker exec -it eight-rooms /bin/bash
