@@ -23,7 +23,7 @@ RUN apt-get update
 RUN apt-get install -y apache2 
 
 # install php
-RUN apt-get install -y php7.2 php-mbstring php-mbstring php-ldap
+RUN apt-get install -y php7.2 php-mbstring php-ldap
 
 # install soft
 RUN apt-get install -y curl zip mc 
