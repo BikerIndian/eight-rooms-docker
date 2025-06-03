@@ -5,7 +5,7 @@ docker-compose up -d
 
 curl -o \
     ./eight-rooms.zip -L \
-    "https://github.com/BikerIndian/eight-rooms/archive/refs/heads/master.zip"
+    "https://github.com/BikerIndian/eight-rooms/archive/refs/heads/fix_subordinates.zip"
 
 unzip -q ./eight-rooms.zip -d ./
 mv  ./eight-rooms-master/* ./html
